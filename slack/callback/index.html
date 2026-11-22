@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex">
+<title>Returning to Blockaid-OS</title>
+<script>
+  // OAuth bounce for local development. Slack requires an HTTPS redirect URL; this page sends the
+  // browser on to the developer's own machine. It holds no secret: the code is useless without the
+  // app's client secret, which lives only in the local .dev.vars.
+  location.replace("http://localhost:8813/api/dev/slack/callback" + location.search);
+</script>
+</head>
+<body style="font-family: system-ui, sans-serif; padding: 2rem">
+  <p>Returning to Blockaid-OS on <code>localhost:8813</code>…</p>
+  <p>If nothing happens, make sure the app is running locally.</p>
+</body>
+</html>
